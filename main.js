@@ -3,12 +3,6 @@ Snack 1
 Creare un array di oggetti:
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.
-Snack2
-Creare un array di oggetti di squadre di calcio.
-Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
-Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
-Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
-Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 Snack 3 (Bonus)
 Scrivere una funzione che accetti tre argomenti, un array 
 ( esempio: ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'] )e due numeri (a più piccolo di b).
@@ -52,7 +46,14 @@ let nomem
 
   /* Fine es.1*/
 
-  /* Inizio es.2*/
+/*Snack2
+Creare un array di oggetti di squadre di calcio.
+Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
+Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+Inizio es.2*/
 
   const squadreCalcio = [
     { nome: "Juventus", punti: 0, falliSubiti: 0 },
@@ -62,3 +63,21 @@ let nomem
     { nome: "Roma", punti: 0, falliSubiti: 0 }
   ];
 
+  function numrand(min, max) {
+
+    let random = Math.floor(Math.random() * max) + min ;
+
+    return random
+    
+}
+
+for (let i = 0; i < squadreCalcio.length; i++) {
+  let element = squadreCalcio [i]
+
+  element.punti = numrand(0,50)
+
+  element.falliSubiti = numrand (0,20)
+
+  console.log(`La squadra ${element.nome} ha ${element.punti} punti e ${element.falliSubiti} falli subiti`)
+  
+}
