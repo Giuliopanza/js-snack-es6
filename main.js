@@ -81,3 +81,26 @@ for (let i = 0; i < squadreCalcio.length; i++) {
   console.log(`La squadra ${element.nome} ha ${element.punti} punti e ${element.falliSubiti} falli subiti`)
   
 }
+
+let newarray = []
+
+for (let x = 0; x < squadreCalcio.length; x++) {
+  let elementa = squadreCalcio [x]
+
+  delete elementa.punti
+
+  newarray.push(elementa)
+  
+}
+
+for (let k = 0; k < newarray.length; k++) {
+  let elementb = newarray[k];
+  for (const y in elementb) {
+
+    console.log(y)
+
+    console.log(elementb [y])
+    
+  }
+  
+}
