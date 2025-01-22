@@ -15,7 +15,7 @@ Scrivere una funzione che accetti tre argomenti, un array
 La funzione ritornerà un nuovo array con li elementi estratti dall'array di partenza che hanno la posizione 
 compresa tra i due numeri (a e b).
 */
-
+/* inizio es.1*/
 const biciDaCorsa = [
     { nome: "Speedster 5000", peso: 7.8 },
     { nome: "Alpine Racer", peso: 8.2 },
@@ -24,20 +24,41 @@ const biciDaCorsa = [
     { nome: "Endurance Max", peso: 8.1 }
   ];
 
-let pesom
+let nomem
 
-  for (let i = 0; i < biciDaCorsa.length-1; i++) {
-    if (biciDaCorsa.peso[i] < biciDaCorsa.peso [i+1]) {
+  for (let i = 0; i < biciDaCorsa.length; i++) {
 
-        pesom = biciDaCorsa.peso [i]
-        
-    }
-    else{
+    let element = biciDaCorsa [i]
 
-        pesom = biciDaCorsa.peso [i+1]
+    let verifica = 0
 
-    }
+  for (let x = 0; x < biciDaCorsa.length; x++) {
+
+    let elementb = biciDaCorsa [x]
+
+    if (element.peso < elementb.peso) {
+
+        verifica++        
+    }   
+  } 
+  if (verifica == biciDaCorsa.length-1) {
+
+    nomem = element.nome
     
+  }   
   }
 
-console.log(`${pesom}`)
+  console.log(`${nomem}`) 
+
+  /* Fine es.1*/
+
+  /* Inizio es.2*/
+
+  const squadreCalcio = [
+    { nome: "Juventus", punti: 0, falliSubiti: 0 },
+    { nome: "Inter", punti: 0, falliSubiti: 0 },
+    { nome: "Milan", punti: 0, falliSubiti: 0 },
+    { nome: "Napoli", punti: 0, falliSubiti: 0 },
+    { nome: "Roma", punti: 0, falliSubiti: 0 }
+  ];
+
